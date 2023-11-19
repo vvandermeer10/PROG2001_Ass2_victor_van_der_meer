@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectBehaviour : MonoBehaviour
 {
     public GameObject person;
+    // public GameObject ground;
     public float value;
     public Vector3 sizeChange;
     private Vector3 position;
@@ -40,12 +41,14 @@ public class ObjectBehaviour : MonoBehaviour
 
     public void GrowObject()
     {
-        person.transform.localScale = person.transform.localScale + sizeChange; 
+        person.transform.localScale = person.transform.localScale + sizeChange;
+        // ground.transform.localScale = ground.transform.localScale + sizeChange;
     }
 
     public void ShrinkObject()
     {
         person.transform.localScale = person.transform.localScale - sizeChange;
+        // ground.transform.localScale = ground.transform.localScale - sizeChange;
     }
 
     public void ResetObject()
